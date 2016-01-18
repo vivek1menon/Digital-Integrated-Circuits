@@ -1,0 +1,33 @@
+*** SPICE deck for cell A_TriState_Buffer{sch} from library A_Final-Project
+*** Created on Fri Dec 11, 2015 23:34:12
+*** Last revised on Thu Dec 17, 2015 16:35:35
+*** Written on Thu Dec 17, 2015 16:36:52 by Electric VLSI Design System, 
+*** version 9.05
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT A_Final-Project__inverter FROM CELL inverter{sch}
+.SUBCKT A_Final-Project__inverter gnd in out vdd
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out in gnd gnd N L=0.6U W=1.2U
+Mpmos@0 out in vdd vdd P L=0.6U W=2.4U
+.ENDS A_Final-Project__inverter
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: A_TriState_Buffer{sch}
+Mnmos@0 net@63 net@65 gnd gnd N L=0.6U W=1.2U
+Mnmos@1 out En net@63 gnd N L=0.6U W=1.2U
+Mpmos@0 net@56 net@65 vdd vdd P L=0.6U W=2.4U
+Mpmos@1 out En net@56 vdd P L=0.6U W=2.4U
+Xinverter@0 gnd Q net@65 vdd A_Final-Project__inverter
+
+* Spice Code nodes in cell cell 'A_TriState_Buffer{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+VIN1 En 0 PULSE(3.3 0 0 100p 100p 10n 40n)
+VIN2 Q 0 PULSE(3.3 0 0 100p 100p 10n 20n)
+.TRAN 0 100n
+.include C:\Users\Vivek\Documents\MODEL_MOS.txt
+.END

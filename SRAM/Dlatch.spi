@@ -1,0 +1,38 @@
+*** SPICE deck for cell Dlatch{sch} from library A_Final-Project
+*** Created on Fri Dec 11, 2015 19:15:59
+*** Last revised on Thu Dec 17, 2015 15:54:48
+*** Written on Thu Dec 17, 2015 15:56:27 by Electric VLSI Design System, 
+*** version 9.05
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Dlatch{sch}
+Mnmos@0 net@7 D net@6 gnd N L=0.6U W=1.2U
+Mnmos@1 net@6 En gnd gnd N L=0.6U W=1.2U
+Mnmos@2 Q net@7 net@22 gnd N L=0.6U W=1.2U
+Mnmos@3 net@22 Q_ gnd gnd N L=0.6U W=1.2U
+Mnmos@4 net@25 En net@31 gnd N L=0.6U W=1.2U
+Mnmos@5 net@31 net@116 gnd gnd N L=0.6U W=1.2U
+Mnmos@6 Q_ Q net@40 gnd N L=0.6U W=1.2U
+Mnmos@7 net@40 net@25 gnd gnd N L=0.6U W=1.2U
+Mnmos@8 net@116 D gnd gnd N L=0.6U W=1.2U
+Mpmos@0 net@7 D vdd vdd P L=0.6U W=2.4U
+Mpmos@1 net@7 En vdd vdd P L=0.6U W=2.4U
+Mpmos@2 Q net@7 vdd vdd P L=0.6U W=2.4U
+Mpmos@3 Q Q_ vdd vdd P L=0.6U W=2.4U
+Mpmos@4 net@25 En vdd vdd P L=0.6U W=2.4U
+Mpmos@5 net@25 net@116 vdd vdd P L=0.6U W=2.4U
+Mpmos@6 Q_ Q vdd vdd P L=0.6U W=2.4U
+Mpmos@7 Q_ net@25 vdd vdd P L=0.6U W=2.4U
+Mpmos@8 net@116 D vdd vdd P L=0.6U W=2.4U
+
+* Spice Code nodes in cell cell 'Dlatch{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+VIN1 D 0 PULSE(3.3 0 0 100p 100p 10n 20n)
+VIN2 En 0 PULSE(3.3 0 0 100p 100p 10n 40n)
+.TRAN 0 100n
+.include C:\Users\Vivek\Documents\MODEL_MOS.txt
+.END

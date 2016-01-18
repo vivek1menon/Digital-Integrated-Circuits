@@ -1,0 +1,295 @@
+*** SPICE deck for cell 1bit-full-adder{sch} from library Full-adder
+*** Created on Mon Nov 23, 2015 16:01:37
+*** Last revised on Tue Nov 24, 2015 21:26:58
+*** Written on Tue Nov 24, 2015 21:27:26 by Electric VLSI Design System, 
+*** version 9.05
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: 1bit-full-adder{sch}
+Mnmos@0 net@1 A0 net@0 gnd N L=0.6U W=1.2U
+Mnmos@1 net@0 B0 gnd gnd N L=0.6U W=1.2U
+Mnmos@2 net@8 B0 gnd gnd N L=0.6U W=1.2U
+Mnmos@3 net@8 A0 gnd gnd N L=0.6U W=1.2U
+Mnmos@4 net@20 net@1 net@22 gnd N L=0.6U W=1.2U
+Mnmos@5 net@22 net@66 gnd gnd N L=0.6U W=1.2U
+Mnmos@6 net@66 net@8 gnd gnd N L=0.6U W=1.2U
+Mnmos@7 net@84 net@132 net@83 gnd N L=0.6U W=1.2U
+Mnmos@8 net@83 Cin gnd gnd N L=0.6U W=1.2U
+Mnmos@9 net@91 Cin gnd gnd N L=0.6U W=1.2U
+Mnmos@10 net@91 net@132 gnd gnd N L=0.6U W=1.2U
+Mnmos@11 net@103 net@84 net@105 gnd N L=0.6U W=1.2U
+Mnmos@12 net@105 net@149 gnd gnd N L=0.6U W=1.2U
+Mnmos@13 net@149 net@91 gnd gnd N L=0.6U W=1.2U
+Mnmos@14 net@166 net@132 net@165 gnd N L=0.6U W=1.2U
+Mnmos@15 net@165 Cin gnd gnd N L=0.6U W=1.2U
+Mnmos@16 net@167 net@198 gnd gnd N L=0.6U W=1.2U
+Mnmos@17 net@167 net@166 gnd gnd N L=0.6U W=1.2U
+Mnmos@18 net@198 A0 net@206 gnd N L=0.6U W=1.2U
+Mnmos@19 net@206 B0 gnd gnd N L=0.6U W=1.2U
+Mnmos@20 net@132 net@20 gnd gnd N L=0.6U W=1.2U
+Mnmos@21 Sum net@103 gnd gnd N L=0.6U W=1.2U
+Mnmos@22 net@373 A1 net@372 gnd N L=0.6U W=1.2U
+Mnmos@23 net@372 B1 gnd gnd N L=0.6U W=1.2U
+Mnmos@24 net@374 B1 gnd gnd N L=0.6U W=1.2U
+Mnmos@25 net@374 A1 gnd gnd N L=0.6U W=1.2U
+Mnmos@26 net@390 net@373 net@378 gnd N L=0.6U W=1.2U
+Mnmos@27 net@378 net@531 gnd gnd N L=0.6U W=1.2U
+Mnmos@28 net@531 net@374 gnd gnd N L=0.6U W=1.2U
+Mnmos@29 net@552 net@422 net@550 gnd N L=0.6U W=1.2U
+Mnmos@30 net@550 net@167 gnd gnd N L=0.6U W=1.2U
+Mnmos@31 net@440 net@167 gnd gnd N L=0.6U W=1.2U
+Mnmos@32 net@440 net@422 gnd gnd N L=0.6U W=1.2U
+Mnmos@33 net@475 net@552 net@602 gnd N L=0.6U W=1.2U
+Mnmos@34 net@602 net@585 gnd gnd N L=0.6U W=1.2U
+Mnmos@35 net@585 net@440 gnd gnd N L=0.6U W=1.2U
+Mnmos@36 net@383 net@422 net@604 gnd N L=0.6U W=1.2U
+Mnmos@37 net@604 net@167 gnd gnd N L=0.6U W=1.2U
+Mnmos@38 net@382 net@391 gnd gnd N L=0.6U W=1.2U
+Mnmos@39 net@382 net@383 gnd gnd N L=0.6U W=1.2U
+Mnmos@40 net@391 A1 net@636 gnd N L=0.6U W=1.2U
+Mnmos@41 net@636 B1 gnd gnd N L=0.6U W=1.2U
+Mnmos@42 net@422 net@390 gnd gnd N L=0.6U W=1.2U
+Mnmos@43 SUM1 net@475 gnd gnd N L=0.6U W=1.2U
+Mnmos@44 net@647 A2 net@646 gnd N L=0.6U W=1.2U
+Mnmos@45 net@646 B2 gnd gnd N L=0.6U W=1.2U
+Mnmos@46 net@648 B2 gnd gnd N L=0.6U W=1.2U
+Mnmos@47 net@648 A2 gnd gnd N L=0.6U W=1.2U
+Mnmos@48 net@664 net@647 net@652 gnd N L=0.6U W=1.2U
+Mnmos@49 net@652 net@805 gnd gnd N L=0.6U W=1.2U
+Mnmos@50 net@805 net@648 gnd gnd N L=0.6U W=1.2U
+Mnmos@51 net@826 net@696 net@824 gnd N L=0.6U W=1.2U
+Mnmos@52 net@824 net@382 gnd gnd N L=0.6U W=1.2U
+Mnmos@53 net@714 net@382 gnd gnd N L=0.6U W=1.2U
+Mnmos@54 net@714 net@696 gnd gnd N L=0.6U W=1.2U
+Mnmos@55 net@749 net@826 net@876 gnd N L=0.6U W=1.2U
+Mnmos@56 net@876 net@859 gnd gnd N L=0.6U W=1.2U
+Mnmos@57 net@859 net@714 gnd gnd N L=0.6U W=1.2U
+Mnmos@58 net@657 net@696 net@878 gnd N L=0.6U W=1.2U
+Mnmos@59 net@878 net@382 gnd gnd N L=0.6U W=1.2U
+Mnmos@60 net@656 net@665 gnd gnd N L=0.6U W=1.2U
+Mnmos@61 net@656 net@657 gnd gnd N L=0.6U W=1.2U
+Mnmos@62 net@665 A2 net@910 gnd N L=0.6U W=1.2U
+Mnmos@63 net@910 B2 gnd gnd N L=0.6U W=1.2U
+Mnmos@64 net@696 net@664 gnd gnd N L=0.6U W=1.2U
+Mnmos@65 SUM2 net@749 gnd gnd N L=0.6U W=1.2U
+Mnmos@132 net@1755 A3 net@1754 gnd N L=0.6U W=1.2U
+Mnmos@133 net@1754 B3 gnd gnd N L=0.6U W=1.2U
+Mnmos@134 net@1756 B3 gnd gnd N L=0.6U W=1.2U
+Mnmos@135 net@1756 A3 gnd gnd N L=0.6U W=1.2U
+Mnmos@136 net@1844 net@1755 net@1864 gnd N L=0.6U W=1.2U
+Mnmos@137 net@1864 net@2286 gnd gnd N L=0.6U W=1.2U
+Mnmos@138 net@2286 net@1756 gnd gnd N L=0.6U W=1.2U
+Mnmos@139 net@1805 net@1784 net@2473 gnd N L=0.6U W=1.2U
+Mnmos@140 net@2473 net@656 gnd gnd N L=0.6U W=1.2U
+Mnmos@141 net@1770 net@656 gnd gnd N L=0.6U W=1.2U
+Mnmos@142 net@1770 net@1784 gnd gnd N L=0.6U W=1.2U
+Mnmos@143 net@1758 net@1805 net@1760 gnd N L=0.6U W=1.2U
+Mnmos@144 net@1760 net@1798 gnd gnd N L=0.6U W=1.2U
+Mnmos@145 net@1798 net@1770 gnd gnd N L=0.6U W=1.2U
+Mnmos@146 net@1816 net@1784 net@1815 gnd N L=0.6U W=1.2U
+Mnmos@147 net@1815 net@656 gnd gnd N L=0.6U W=1.2U
+Mnmos@148 net@1817 net@1841 gnd gnd N L=0.6U W=1.2U
+Mnmos@149 net@1817 net@1816 gnd gnd N L=0.6U W=1.2U
+Mnmos@150 net@1841 A3 net@1851 gnd N L=0.6U W=1.2U
+Mnmos@151 net@1851 B3 gnd gnd N L=0.6U W=1.2U
+Mnmos@152 net@1784 net@1844 gnd gnd N L=0.6U W=1.2U
+Mnmos@153 SUM3 net@1758 gnd gnd N L=0.6U W=1.2U
+Mnmos@154 net@1976 A4 net@1975 gnd N L=0.6U W=1.2U
+Mnmos@155 net@1975 B4 gnd gnd N L=0.6U W=1.2U
+Mnmos@156 net@1977 B4 gnd gnd N L=0.6U W=1.2U
+Mnmos@157 net@1977 A4 gnd gnd N L=0.6U W=1.2U
+Mnmos@158 net@1995 net@1976 net@1981 gnd N L=0.6U W=1.2U
+Mnmos@159 net@1981 net@2147 gnd gnd N L=0.6U W=1.2U
+Mnmos@160 net@2147 net@1977 gnd gnd N L=0.6U W=1.2U
+Mnmos@161 net@2170 net@2031 net@2168 gnd N L=0.6U W=1.2U
+Mnmos@162 net@2168 net@1817 gnd gnd N L=0.6U W=1.2U
+Mnmos@163 net@2050 net@1817 gnd gnd N L=0.6U W=1.2U
+Mnmos@164 net@2050 net@2031 gnd gnd N L=0.6U W=1.2U
+Mnmos@165 net@2085 net@2170 net@2226 gnd N L=0.6U W=1.2U
+Mnmos@166 net@2226 net@2206 gnd gnd N L=0.6U W=1.2U
+Mnmos@167 net@2206 net@2050 gnd gnd N L=0.6U W=1.2U
+Mnmos@168 net@1987 net@2031 net@2228 gnd N L=0.6U W=1.2U
+Mnmos@169 net@2228 net@1817 gnd gnd N L=0.6U W=1.2U
+Mnmos@170 net@1825 net@1996 gnd gnd N L=0.6U W=1.2U
+Mnmos@171 net@1825 net@1987 gnd gnd N L=0.6U W=1.2U
+Mnmos@172 net@1996 A4 net@2260 gnd N L=0.6U W=1.2U
+Mnmos@173 net@2260 B4 gnd gnd N L=0.6U W=1.2U
+Mnmos@174 net@2031 net@1995 gnd gnd N L=0.6U W=1.2U
+Mnmos@175 SUM4 net@2085 gnd gnd N L=0.6U W=1.2U
+Mnmos@176 net@2272 A5 net@2271 gnd N L=0.6U W=1.2U
+Mnmos@177 net@2271 B5 gnd gnd N L=0.6U W=1.2U
+Mnmos@178 net@2273 B5 gnd gnd N L=0.6U W=1.2U
+Mnmos@179 net@2273 A5 gnd gnd N L=0.6U W=1.2U
+Mnmos@180 net@2291 net@2272 net@2278 gnd N L=0.6U W=1.2U
+Mnmos@181 net@2278 net@2447 gnd gnd N L=0.6U W=1.2U
+Mnmos@182 net@2447 net@2273 gnd gnd N L=0.6U W=1.2U
+Mnmos@183 net@2469 net@2326 net@2467 gnd N L=0.6U W=1.2U
+Mnmos@184 net@2467 net@1825 gnd gnd N L=0.6U W=1.2U
+Mnmos@185 net@2347 net@1825 gnd gnd N L=0.6U W=1.2U
+Mnmos@186 net@2347 net@2326 gnd gnd N L=0.6U W=1.2U
+Mnmos@187 net@2384 net@2469 net@2524 gnd N L=0.6U W=1.2U
+Mnmos@188 net@2524 net@2505 gnd gnd N L=0.6U W=1.2U
+Mnmos@189 net@2505 net@2347 gnd gnd N L=0.6U W=1.2U
+Mnmos@190 net@2283 net@2326 net@2526 gnd N L=0.6U W=1.2U
+Mnmos@191 net@2526 net@1825 gnd gnd N L=0.6U W=1.2U
+Mnmos@192 Cout net@2292 gnd gnd N L=0.6U W=1.2U
+Mnmos@193 Cout net@2283 gnd gnd N L=0.6U W=1.2U
+Mnmos@194 net@2292 A5 net@2563 gnd N L=0.6U W=1.2U
+Mnmos@195 net@2563 B5 gnd gnd N L=0.6U W=1.2U
+Mnmos@196 net@2326 net@2291 gnd gnd N L=0.6U W=1.2U
+Mnmos@197 SUM5 net@2384 gnd gnd N L=0.6U W=1.2U
+Mpmos@0 net@1 A0 vdd vdd P L=0.6U W=2.4U
+Mpmos@1 net@1 B0 vdd vdd P L=0.6U W=2.4U
+Mpmos@2 net@7 A0 vdd vdd P L=0.6U W=2.4U
+Mpmos@3 net@8 B0 net@7 vdd P L=0.6U W=2.4U
+Mpmos@4 net@20 net@1 vdd vdd P L=0.6U W=2.4U
+Mpmos@5 net@20 net@66 vdd vdd P L=0.6U W=2.4U
+Mpmos@6 net@66 net@8 vdd vdd P L=0.6U W=2.4U
+Mpmos@7 net@84 net@132 vdd vdd P L=0.6U W=2.4U
+Mpmos@8 net@84 Cin vdd vdd P L=0.6U W=2.4U
+Mpmos@9 net@90 net@132 vdd vdd P L=0.6U W=2.4U
+Mpmos@10 net@91 Cin net@90 vdd P L=0.6U W=2.4U
+Mpmos@11 net@103 net@84 vdd vdd P L=0.6U W=2.4U
+Mpmos@12 net@103 net@149 vdd vdd P L=0.6U W=2.4U
+Mpmos@13 net@149 net@91 vdd vdd P L=0.6U W=2.4U
+Mpmos@14 net@166 net@132 vdd vdd P L=0.6U W=2.4U
+Mpmos@15 net@166 Cin vdd vdd P L=0.6U W=2.4U
+Mpmos@16 net@217 net@166 vdd vdd P L=0.6U W=2.4U
+Mpmos@17 net@167 net@198 net@217 vdd P L=0.6U W=2.4U
+Mpmos@18 net@198 A0 net@201 vdd P L=0.6U W=2.4U
+Mpmos@19 net@198 B0 net@201 vdd P L=0.6U W=2.4U
+Mpmos@20 net@132 net@20 vdd vdd P L=0.6U W=2.4U
+Mpmos@21 Sum net@103 vdd vdd P L=0.6U W=2.4U
+Mpmos@22 net@373 A1 vdd vdd P L=0.6U W=2.4U
+Mpmos@23 net@373 B1 vdd vdd P L=0.6U W=2.4U
+Mpmos@24 net@535 A1 vdd vdd P L=0.6U W=2.4U
+Mpmos@25 net@374 B1 net@535 vdd P L=0.6U W=2.4U
+Mpmos@26 net@390 net@373 vdd vdd P L=0.6U W=2.4U
+Mpmos@27 net@390 net@531 vdd vdd P L=0.6U W=2.4U
+Mpmos@28 net@531 net@374 vdd vdd P L=0.6U W=2.4U
+Mpmos@29 net@552 net@422 vdd vdd P L=0.6U W=2.4U
+Mpmos@30 net@552 net@167 vdd vdd P L=0.6U W=2.4U
+Mpmos@31 net@559 net@422 vdd vdd P L=0.6U W=2.4U
+Mpmos@32 net@440 net@167 net@559 vdd P L=0.6U W=2.4U
+Mpmos@33 net@475 net@552 vdd vdd P L=0.6U W=2.4U
+Mpmos@34 net@475 net@585 vdd vdd P L=0.6U W=2.4U
+Mpmos@35 net@585 net@440 vdd vdd P L=0.6U W=2.4U
+Mpmos@36 net@383 net@422 vdd vdd P L=0.6U W=2.4U
+Mpmos@37 net@383 net@167 vdd vdd P L=0.6U W=2.4U
+Mpmos@38 net@375 net@383 vdd vdd P L=0.6U W=2.4U
+Mpmos@39 net@382 net@391 net@375 vdd P L=0.6U W=2.4U
+Mpmos@40 net@391 A1 net@630 vdd P L=0.6U W=2.4U
+Mpmos@41 net@391 B1 net@630 vdd P L=0.6U W=2.4U
+Mpmos@42 net@422 net@390 vdd vdd P L=0.6U W=2.4U
+Mpmos@43 SUM1 net@475 vdd vdd P L=0.6U W=2.4U
+Mpmos@44 net@647 A2 vdd vdd P L=0.6U W=2.4U
+Mpmos@45 net@647 B2 vdd vdd P L=0.6U W=2.4U
+Mpmos@46 net@809 A2 vdd vdd P L=0.6U W=2.4U
+Mpmos@47 net@648 B2 net@809 vdd P L=0.6U W=2.4U
+Mpmos@48 net@664 net@647 vdd vdd P L=0.6U W=2.4U
+Mpmos@49 net@664 net@805 vdd vdd P L=0.6U W=2.4U
+Mpmos@50 net@805 net@648 vdd vdd P L=0.6U W=2.4U
+Mpmos@51 net@826 net@696 vdd vdd P L=0.6U W=2.4U
+Mpmos@52 net@826 net@382 vdd vdd P L=0.6U W=2.4U
+Mpmos@53 net@833 net@696 vdd vdd P L=0.6U W=2.4U
+Mpmos@54 net@714 net@382 net@833 vdd P L=0.6U W=2.4U
+Mpmos@55 net@749 net@826 vdd vdd P L=0.6U W=2.4U
+Mpmos@56 net@749 net@859 vdd vdd P L=0.6U W=2.4U
+Mpmos@57 net@859 net@714 vdd vdd P L=0.6U W=2.4U
+Mpmos@58 net@657 net@696 vdd vdd P L=0.6U W=2.4U
+Mpmos@59 net@657 net@382 vdd vdd P L=0.6U W=2.4U
+Mpmos@60 net@649 net@657 vdd vdd P L=0.6U W=2.4U
+Mpmos@61 net@656 net@665 net@649 vdd P L=0.6U W=2.4U
+Mpmos@62 net@665 A2 net@904 vdd P L=0.6U W=2.4U
+Mpmos@63 net@665 B2 net@904 vdd P L=0.6U W=2.4U
+Mpmos@64 net@696 net@664 vdd vdd P L=0.6U W=2.4U
+Mpmos@65 SUM2 net@749 vdd vdd P L=0.6U W=2.4U
+Mpmos@132 net@1755 A3 vdd vdd P L=0.6U W=2.4U
+Mpmos@133 net@1755 B3 vdd vdd P L=0.6U W=2.4U
+Mpmos@134 net@2330 A3 vdd vdd P L=0.6U W=2.4U
+Mpmos@135 net@1756 B3 net@2330 vdd P L=0.6U W=2.4U
+Mpmos@136 net@1844 net@1755 vdd vdd P L=0.6U W=2.4U
+Mpmos@137 net@1844 net@2286 vdd vdd P L=0.6U W=2.4U
+Mpmos@138 net@2286 net@1756 vdd vdd P L=0.6U W=2.4U
+Mpmos@139 net@1805 net@1784 vdd vdd P L=0.6U W=2.4U
+Mpmos@140 net@1805 net@656 vdd vdd P L=0.6U W=2.4U
+Mpmos@141 net@2551 net@1784 vdd vdd P L=0.6U W=2.4U
+Mpmos@142 net@1770 net@656 net@2551 vdd P L=0.6U W=2.4U
+Mpmos@143 net@1758 net@1805 vdd vdd P L=0.6U W=2.4U
+Mpmos@144 net@1758 net@1798 vdd vdd P L=0.6U W=2.4U
+Mpmos@145 net@1798 net@1770 vdd vdd P L=0.6U W=2.4U
+Mpmos@146 net@1816 net@1784 vdd vdd P L=0.6U W=2.4U
+Mpmos@147 net@1816 net@656 vdd vdd P L=0.6U W=2.4U
+Mpmos@148 net@1861 net@1816 vdd vdd P L=0.6U W=2.4U
+Mpmos@149 net@1817 net@1841 net@1861 vdd P L=0.6U W=2.4U
+Mpmos@150 net@1841 A3 net@1846 vdd P L=0.6U W=2.4U
+Mpmos@151 net@1841 B3 net@1846 vdd P L=0.6U W=2.4U
+Mpmos@152 net@1784 net@1844 vdd vdd P L=0.6U W=2.4U
+Mpmos@153 SUM3 net@1758 vdd vdd P L=0.6U W=2.4U
+Mpmos@154 net@1976 A4 vdd vdd P L=0.6U W=2.4U
+Mpmos@155 net@1976 B4 vdd vdd P L=0.6U W=2.4U
+Mpmos@156 net@2151 A4 vdd vdd P L=0.6U W=2.4U
+Mpmos@157 net@1977 B4 net@2151 vdd P L=0.6U W=2.4U
+Mpmos@158 net@1995 net@1976 vdd vdd P L=0.6U W=2.4U
+Mpmos@159 net@1995 net@2147 vdd vdd P L=0.6U W=2.4U
+Mpmos@160 net@2147 net@1977 vdd vdd P L=0.6U W=2.4U
+Mpmos@161 net@2170 net@2031 vdd vdd P L=0.6U W=2.4U
+Mpmos@162 net@2170 net@1817 vdd vdd P L=0.6U W=2.4U
+Mpmos@163 net@2177 net@2031 vdd vdd P L=0.6U W=2.4U
+Mpmos@164 net@2050 net@1817 net@2177 vdd P L=0.6U W=2.4U
+Mpmos@165 net@2085 net@2170 vdd vdd P L=0.6U W=2.4U
+Mpmos@166 net@2085 net@2206 vdd vdd P L=0.6U W=2.4U
+Mpmos@167 net@2206 net@2050 vdd vdd P L=0.6U W=2.4U
+Mpmos@168 net@1987 net@2031 vdd vdd P L=0.6U W=2.4U
+Mpmos@169 net@1987 net@1817 vdd vdd P L=0.6U W=2.4U
+Mpmos@170 net@1978 net@1987 vdd vdd P L=0.6U W=2.4U
+Mpmos@171 net@1825 net@1996 net@1978 vdd P L=0.6U W=2.4U
+Mpmos@172 net@1996 A4 net@2254 vdd P L=0.6U W=2.4U
+Mpmos@173 net@1996 B4 net@2254 vdd P L=0.6U W=2.4U
+Mpmos@174 net@2031 net@1995 vdd vdd P L=0.6U W=2.4U
+Mpmos@175 SUM4 net@2085 vdd vdd P L=0.6U W=2.4U
+Mpmos@176 net@2272 A5 vdd vdd P L=0.6U W=2.4U
+Mpmos@177 net@2272 B5 vdd vdd P L=0.6U W=2.4U
+Mpmos@178 net@2451 A5 vdd vdd P L=0.6U W=2.4U
+Mpmos@179 net@2273 B5 net@2451 vdd P L=0.6U W=2.4U
+Mpmos@180 net@2291 net@2272 vdd vdd P L=0.6U W=2.4U
+Mpmos@181 net@2291 net@2447 vdd vdd P L=0.6U W=2.4U
+Mpmos@182 net@2447 net@2273 vdd vdd P L=0.6U W=2.4U
+Mpmos@183 net@2469 net@2326 vdd vdd P L=0.6U W=2.4U
+Mpmos@184 net@2469 net@1825 vdd vdd P L=0.6U W=2.4U
+Mpmos@185 net@2477 net@2326 vdd vdd P L=0.6U W=2.4U
+Mpmos@186 net@2347 net@1825 net@2477 vdd P L=0.6U W=2.4U
+Mpmos@187 net@2384 net@2469 vdd vdd P L=0.6U W=2.4U
+Mpmos@188 net@2384 net@2505 vdd vdd P L=0.6U W=2.4U
+Mpmos@189 net@2505 net@2347 vdd vdd P L=0.6U W=2.4U
+Mpmos@190 net@2283 net@2326 vdd vdd P L=0.6U W=2.4U
+Mpmos@191 net@2283 net@1825 vdd vdd P L=0.6U W=2.4U
+Mpmos@192 net@2274 net@2283 vdd vdd P L=0.6U W=2.4U
+Mpmos@193 Cout net@2292 net@2274 vdd P L=0.6U W=2.4U
+Mpmos@194 net@2292 A5 net@2556 vdd P L=0.6U W=2.4U
+Mpmos@195 net@2292 B5 net@2556 vdd P L=0.6U W=2.4U
+Mpmos@196 net@2326 net@2291 vdd vdd P L=0.6U W=2.4U
+Mpmos@197 SUM5 net@2384 vdd vdd P L=0.6U W=2.4U
+
+* Spice Code nodes in cell cell '1bit-full-adder{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+VIN1 A0 0 PULSE(3.3 0 0 100p 100p 20n 40n)
+VIN2 A1 0 DC 0
+VIN3 A2 0 DC 0
+VIN4 A3 0 DC 0
+VIN5 A4 0 DC 0
+VIN6 A5 0 DC 0
+VIN7 B0 0 DC 0
+VIN8 B1 0 DC 0
+VIN9 B2 0 PULSE(3.3 0 0 100p 100p 20n 40n)
+VIN10 B3 0 DC 0
+VIN11 B4 0 DC 0
+VIN12 B5 0 DC 0
+VIN13 Cin 0 DC 0
+.TRAN 0 50n
+.include C:\Users\Vivek\Documents\MODEL_MOS.txt
+.END

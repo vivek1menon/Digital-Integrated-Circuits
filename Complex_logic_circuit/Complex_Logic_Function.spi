@@ -1,0 +1,43 @@
+*** SPICE deck for cell Complex_Logic_Function{sch} from library Project2
+*** Created on Mon Oct 19, 2015 15:28:44
+*** Last revised on Thu Oct 29, 2015 01:02:33
+*** Written on Thu Oct 29, 2015 01:03:35 by Electric VLSI Design System, 
+*** version 9.05
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Project2:Complex_Logic_Function{sch}
+Mnmos@0 net@25 net@131 gnd gnd N L=0.6U W=1.2U
+Mnmos@1 F net@72 net@25 gnd N L=0.6U W=1.2U
+Mnmos@2 F B2 net@25 gnd N L=0.6U W=1.2U
+Mnmos@3 net@25 B3 gnd gnd N L=0.6U W=1.2U
+Mnmos@4 F net@74 net@31 gnd N L=0.6U W=1.2U
+Mnmos@5 net@31 C gnd gnd N L=0.6U W=1.2U
+Mnmos@7 net@74 D gnd gnd N L=0.6U W=1.2U
+Mnmos@8 net@131 C gnd gnd N L=0.6U W=1.2U
+Mnmos@9 net@72 A gnd gnd N L=0.6U W=1.2U
+Mpmos@0 net@5 net@72 vdd vdd P L=0.6U W=2.4U
+Mpmos@2 net@173 B vdd vdd P L=0.6U W=2.4U
+Mpmos@3 net@16 B1 net@5 vdd P L=0.6U W=2.4U
+Mpmos@4 net@16 net@131 net@173 vdd P L=0.6U W=2.4U
+Mpmos@5 F C net@16 vdd P L=0.6U W=2.4U
+Mpmos@6 F net@74 net@16 vdd P L=0.6U W=2.4U
+Mpmos@7 net@74 D vdd vdd P L=0.6U W=2.4U
+Mpmos@8 net@131 C vdd vdd P L=0.6U W=2.4U
+Mpmos@9 net@72 A vdd vdd P L=0.6U W=2.4U
+
+* Spice Code nodes in cell cell 'Project2:Complex_Logic_Function{sch}'
+VDD VDD 0 DC 1.8
+VGND GND 0 DC 0
+VIN1 A 0 DC 1.8
+VIN2 B 0 DC 0
+VIN3 B1 0 DC 0
+VIN4 B2 0 DC 0
+VIN5 B3 0 DC 0
+VIN6 C 0 PULSE(1.8 0 0 100p 100p 20n 40n)
+VIN7 D 0 DC 0
+.TRAN 0 50n
+.include C:\Users\Vivek\Documents\MODEL_MOS.txt
+.END

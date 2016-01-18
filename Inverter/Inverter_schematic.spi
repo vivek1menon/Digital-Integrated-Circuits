@@ -1,0 +1,20 @@
+*** SPICE deck for cell Inverter2{sch} from library CMOS
+*** Created on Thu Oct 08, 2015 00:58:47
+*** Last revised on Thu Oct 08, 2015 10:24:12
+*** Written on Thu Oct 08, 2015 11:15:29 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Inverter2{sch}
+MN Out In gnd gnd N L=0.7U W=1.4U
+MP Out In vdd vdd P L=0.7U W=2.8U
+
+* Spice Code nodes in cell cell 'Inverter2{sch}'
+VDD VDD 0 DC 1.8
+VGND GND 0 DC 0
+VIN In 0 PULSE(1.8 0 0 1000p 1000p 10n 20n)
+.TRAN 0 100n
+.include C:\Users\Vivek\Documents\MODEL_MOS.txt
+.END

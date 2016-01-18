@@ -1,0 +1,104 @@
+*** SPICE deck for cell A_8bit_SRAM_cell{sch} from library A_Final-Project
+*** Created on Sat Dec 12, 2015 00:07:26
+*** Last revised on Thu Dec 17, 2015 17:06:24
+*** Written on Thu Dec 17, 2015 17:08:06 by Electric VLSI Design System, 
+*** version 9.05
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT A_Final-Project__NAND FROM CELL NAND{sch}
+.SUBCKT A_Final-Project__NAND A AnandB B gnd vdd
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@2 AnandB A net@89 gnd N L=0.6U W=1.2U
+Mnmos@3 net@89 B gnd gnd N L=0.6U W=1.2U
+Mpmos@2 AnandB B vdd vdd P L=0.6U W=2.4U
+Mpmos@3 AnandB A vdd vdd P L=0.6U W=2.4U
+.ENDS A_Final-Project__NAND
+
+*** SUBCIRCUIT A_Final-Project__inverter FROM CELL inverter{sch}
+.SUBCKT A_Final-Project__inverter gnd in out vdd
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out in gnd gnd N L=0.6U W=1.2U
+Mpmos@0 out in vdd vdd P L=0.6U W=2.4U
+.ENDS A_Final-Project__inverter
+
+*** SUBCIRCUIT A_Final-Project__AND FROM CELL AND{sch}
+.SUBCKT A_Final-Project__AND A B out
+** GLOBAL gnd
+** GLOBAL vdd
+XNAND@0 A net@0 B gnd vdd A_Final-Project__NAND
+Xinverter@0 gnd net@0 out vdd A_Final-Project__inverter
+.ENDS A_Final-Project__AND
+
+*** SUBCIRCUIT A_Final-Project__A_D_Latch FROM CELL A_D_Latch{sch}
+.SUBCKT A_Final-Project__A_D_Latch D En Q
+** GLOBAL gnd
+** GLOBAL vdd
+XNAND@1 En net@47 net@43 gnd vdd A_Final-Project__NAND
+XNAND@2 net@64 Q net@65 gnd vdd A_Final-Project__NAND
+XNAND@3 Q net@65 net@47 gnd vdd A_Final-Project__NAND
+XNAND@4 D net@64 En gnd vdd A_Final-Project__NAND
+Xinverter@0 gnd D net@43 vdd A_Final-Project__inverter
+.ENDS A_Final-Project__A_D_Latch
+
+*** SUBCIRCUIT A_Final-Project__A_MasterSlave_DFF FROM CELL 
+*** A_MasterSlave_DFF{sch}
+.SUBCKT A_Final-Project__A_MasterSlave_DFF D En Q
+** GLOBAL gnd
+** GLOBAL vdd
+XA_D_Latc@0 D En net@3 A_Final-Project__A_D_Latch
+XA_D_Latc@1 net@3 net@0 Q A_Final-Project__A_D_Latch
+Xinverter@0 gnd En net@0 vdd A_Final-Project__inverter
+.ENDS A_Final-Project__A_MasterSlave_DFF
+
+*** SUBCIRCUIT A_Final-Project__A_TriState_Buffer FROM CELL 
+*** A_TriState_Buffer{sch}
+.SUBCKT A_Final-Project__A_TriState_Buffer En gnd out Q vdd
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@63 net@65 gnd gnd N L=0.6U W=1.2U
+Mnmos@1 out En net@63 gnd N L=0.6U W=1.2U
+Mpmos@0 net@56 net@65 vdd vdd P L=0.6U W=2.4U
+Mpmos@1 out En net@56 vdd P L=0.6U W=2.4U
+Xinverter@0 gnd Q net@65 vdd A_Final-Project__inverter
+.ENDS A_Final-Project__A_TriState_Buffer
+
+*** SUBCIRCUIT A_Final-Project__A_SRAM_cell FROM CELL A_SRAM_cell{sch}
+.SUBCKT A_Final-Project__A_SRAM_cell CS DataIn DataOut WE
+** GLOBAL gnd
+** GLOBAL vdd
+XAND@0 CS WE net@12 A_Final-Project__AND
+XA_Master@0 DataIn net@12 net@5 A_Final-Project__A_MasterSlave_DFF
+XA_TriSta@0 CS gnd DataOut net@5 vdd A_Final-Project__A_TriState_Buffer
+.ENDS A_Final-Project__A_SRAM_cell
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: A_8bit_SRAM_cell{sch}
+XA_SRAM_c@0 CS D1 O1 WE A_Final-Project__A_SRAM_cell
+XA_SRAM_c@1 CS D2 O2 WE A_Final-Project__A_SRAM_cell
+XA_SRAM_c@2 CS D3 O3 WE A_Final-Project__A_SRAM_cell
+XA_SRAM_c@3 CS D0 O0 WE A_Final-Project__A_SRAM_cell
+XA_SRAM_c@4 CS D5 O5 WE A_Final-Project__A_SRAM_cell
+XA_SRAM_c@5 CS D6 O6 WE A_Final-Project__A_SRAM_cell
+XA_SRAM_c@6 CS D7 O7 WE A_Final-Project__A_SRAM_cell
+XA_SRAM_c@7 CS D4 O4 WE A_Final-Project__A_SRAM_cell
+
+* Spice Code nodes in cell cell 'A_8bit_SRAM_cell{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+VIN1 CS 0 PULSE(3.3 0 0 100p 100p 10n 40n)
+VIN2 WE 0 PULSE(3.3 0 0 100p 100p 10n 40n)
+VIN3 D0 0 DC 0
+VIN4 D1 0 PULSE(3.3 0 0 100p 100p 10n 20n)
+VIN5 D2 0 DC 0
+VIN6 D3 0 DC 0
+VIN7 D4 0 PULSE(3.3 0 0 100p 100p 10n 20n)
+VIN8 D5 0 PULSE(3.3 0 0 100p 100p 10n 20n)
+VIN9 D6 0 PULSE(3.3 0 0 100p 100p 10n 20n)
+VIN10 D7 0 DC 0
+.TRAN 0 100n
+.include C:\Users\Vivek\Documents\MODEL_MOS.txt
+.END

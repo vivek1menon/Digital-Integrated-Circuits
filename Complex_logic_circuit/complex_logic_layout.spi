@@ -1,0 +1,43 @@
+*** SPICE deck for cell complex_logic_layout{lay} from library Project2
+*** Created on Sun Oct 25, 2015 16:02:16
+*** Last revised on Thu Oct 29, 2015 02:46:35
+*** Written on Thu Oct 29, 2015 02:46:59 by Electric VLSI Design System, 
+*** version 9.05
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: complex_logic_layout{lay}
+MN net@43 net@126 net@42 gnd N L=0.6U W=3U AS=5.4P AD=3.712P PS=9.6U 
++PD=5.475U
+MN_1 gnd net@140 net@43 gnd N L=0.6U W=3U AS=3.712P AD=19.95P PS=5.475U 
++PD=28.8U
+MN_2 net@65 C gnd gnd N L=0.6U W=3U AS=19.95P AD=2.7P PS=28.8U PD=4.8U
+MN_3 net@49 net@114 net@65 gnd N L=0.6U W=3U AS=2.7P AD=3.825P PS=4.8U 
++PD=5.55U
+MN_4 net@43 B net@49 gnd N L=0.6U W=3U AS=3.825P AD=3.712P PS=5.55U PD=5.475U
+MN_5 gnd net@102 net@43 gnd N L=0.6U W=3U AS=3.712P AD=19.95P PS=5.475U 
++PD=28.8U
+MN_6 net@102 C gnd gnd N L=0.6U W=3U AS=19.95P AD=5.4P PS=28.8U PD=9.6U
+MN_7 net@114 D gnd gnd N L=0.6U W=3U AS=19.95P AD=5.4P PS=28.8U PD=9.6U
+MN_8 net@126 A gnd gnd N L=0.6U W=3U AS=19.95P AD=5.4P PS=28.8U PD=9.6U
+MP net@71 net@126 vdd vdd P L=0.6U W=3U AS=34.56P AD=2.7P PS=34.8U PD=4.8U
+MP_1 net@24 net@140 net@71 vdd P L=0.6U W=3U AS=2.7P AD=4.05P PS=4.8U PD=5.7U
+MP_2 net@25 C net@24 vdd P L=0.6U W=3U AS=4.05P AD=3.375P PS=5.7U PD=5.25U
+MP_3 net@24 net@114 net@25 vdd P L=0.6U W=3U AS=3.375P AD=4.05P PS=5.25U 
++PD=5.7U
+MP_4 net@68 B net@24 vdd P L=0.6U W=3U AS=4.05P AD=2.7P PS=5.7U PD=4.8U
+MP_5 vdd net@102 net@68 vdd P L=0.6U W=3U AS=2.7P AD=34.56P PS=4.8U PD=34.8U
+MP_6 net@102 C vdd vdd P L=0.6U W=3U AS=34.56P AD=5.4P PS=34.8U PD=9.6U
+MP_7 net@114 D vdd vdd P L=0.6U W=3U AS=34.56P AD=5.4P PS=34.8U PD=9.6U
+MP_8 net@126 A vdd vdd P L=0.6U W=3U AS=34.56P AD=5.4P PS=34.8U PD=9.6U
+
+* Spice Code nodes in cell cell 'complex_logic_layout{lay}'
+VDD VDD 0 DC 1.8
+VGND GND 0 DC 0
+VIN1 A 0 DC 1.8
+VIN2 B 0 DC 0
+VIN6 C 0 PULSE(1.8 0 0 100p 100p 20n 40n)
+VIN7 D 0 DC 0
+.TRAN 0 50n
+.include C:\Users\Vivek\Documents\MODEL_MOS.txt
+.END
